@@ -1,0 +1,12 @@
+<div class="bg-white rounded mt-10 mb-4 d-flex align-items-center py-2 justify-content-around">
+  <div *ngFor="let product of subCategories">
+    <h4 [routerLink]="['/','product',categoryId,product.id]" routerLinkActive="active" style="cursor: pointer;">
+      {{product.name}}</h4>
+  </div>
+
+</div>
+
+<div class="m-4">
+  <router-outlet></router-outlet>
+
+</div>

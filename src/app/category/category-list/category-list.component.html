@@ -1,0 +1,47 @@
+<div style="height: 6vh; margin: 20px;">
+    <h1>Explore Popular Categories</h1>
+</div>
+<div class="d-flex mt-10 row">
+    <div class="row">
+        <ng-container *ngFor="let item of category">
+            <div class="col-lg-4" (click)="navigateToProductListing(item.id)">
+                <img [src]="item.url" width="100" height="80" style="cursor: pointer;">
+                <h2>{{item.name}}</h2>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<div style="height: 6vh; margin: 20px;">
+    <h1>Trending Auction</h1>
+</div>
+<div class="d-flex mt-10 row">
+    <div class="row">
+        <ng-container *ngFor="let product of products">
+            <div class="col-lg-3" (click)="navigateToProductOutOfStok(product.id)">
+                <img [src]="product.url" width="100" height="80" style="cursor: pointer;">
+                <h5>{{product.name}}</h5>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <footer class="bg-dark text-center text-white">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Infiniti Research | Handcrafted in ಬೆಂಗಳೂರು :
+      <a class="text-white" href="https://www.infinitiresearch.com/">Infiniti Research</a>
+    </div>
+  </footer>

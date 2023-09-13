@@ -1,0 +1,32 @@
+<div class="card shadow">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" id="header">
+    <div class="container-fluid">
+      <a class="navbar-brand">Infiniti Research</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <button  (click)="goBack()" mat-stroked-button color="accent">
+            <mat-icon>menu</mat-icon>
+            All Categories
+          </button>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <form class="d-flex col-6" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search by Products & Services"
+            aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<ngx-ui-loader></ngx-ui-loader>
